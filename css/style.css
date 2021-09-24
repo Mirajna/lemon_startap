@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap');
+
+/*@font-face {
+    font-family: 'montserrat_alternatesbold';
+    src: url('../fonts/montserratalternates-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserratalternates-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'montserrat_alternatesmedium';
+    src: url('../fonts/montserratalternates-medium-webfont.woff2') format('woff2'),
+         url('../fonts/montserratalternates-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    color: #000;
+    font: 400 14px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+input {
+    outline: none;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main_banner {
+    min-height: 100vh;
+    background: url("../images/main_banner.jpg") no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 34px 0;
+}
+
+.logo {
+    font: 700 24px/36px 'Montserrat', Arial, Tahoma, sans-serif;
+    color: #fff;
+}
+
+.navigation a {
+    color: #fff;
+    font: 400 14px/24px 'Montserrat', Arial, Tahoma, sans-serif;
+    padding: 5px 13px;
+    /*transition: 0.3s;*/
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.navigation a:last-child {
+    padding-right: 0;
+}
