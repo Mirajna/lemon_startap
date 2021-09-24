@@ -168,6 +168,8 @@ h2 {
         padding: 5px 0;
         text-align: center;
         font-size: 14px;
+        color: #c0301c;
+        font-weight: 600;
     }
 
     .mobile-menu {
@@ -183,8 +185,17 @@ h2 {
         padding: 20px 15px;
         text-align: center;
         z-index: 10;
-        background: #c0301c;
+        background: #fff;
+        /*border: 2px dotted #c0301c;*/
         border-radius: 4px;
+    }
+
+    .banner_text {
+        height: 365px;
+    }
+
+    h1 {
+        margin: 300px 0 34px 0;
     }
 }
 
@@ -200,5 +211,12 @@ h2 {
     
     .button {
         font-size: 14px;
+    }
+}
+
+@media  (max-width: 285px) {
+
+    .logo {
+        padding-right: 5px;
     }
 }
