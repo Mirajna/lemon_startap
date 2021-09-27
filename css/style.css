@@ -158,6 +158,10 @@ table {
     color: #c0301c;
 }
 
+.about .swiper-slide {
+    text-align: center;
+}
+
 .about-img-wrapper {
     position:relative;
     overflow: hidden;
@@ -172,7 +176,8 @@ table {
     height: 100%;
     left: 0;
     top: 0;
-    background: rgb(85, 85, 85, .5);
+    opacity: 0;
+    background-color: rgba(85, 85, 85, .5);
     transition: .3s;
     z-index: -1;
 }
@@ -189,7 +194,7 @@ table {
     position: absolute;
     left: 0;
     bottom: -100%;
-    transition: 0.3s;
+    transition: .3s;
     z-index: 10;
 }
 
@@ -199,7 +204,7 @@ table {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .about-img-wrapper a:hover {
