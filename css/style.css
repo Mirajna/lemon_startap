@@ -70,18 +70,19 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 34px 0;
+    padding: 32px 0;
 }
 
 .logo {
     font: 700 24px/36px 'Montserrat', Arial, Tahoma, sans-serif;
     color: #fff;
+    letter-spacing: -0.6px;
 }
 
 .navigation a {
     color: #fff;
     font: 400 14px/24px 'Montserrat', Arial, Tahoma, sans-serif;
-    padding: 5px 13px;
+    padding: 5px 16px;
 }
 
 .navigation a:hover {
@@ -90,6 +91,10 @@ table {
 
 .navigation a:last-child {
     padding-right: 0;
+}
+
+.menu {
+    padding-top: 2px;
 }
 
 .mobile-menu {
@@ -115,6 +120,7 @@ table {
 .banner_text {
     display: flex;
     height: 565px;
+    /*flex-grow: 1; (доделать это дома, вместе с main_banner)*/
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -123,12 +129,11 @@ table {
     text-transform: uppercase;
 }
 
-h1 {
+.banner_text h1 {
     font: 500 48px 'Montserrat', Arial, Tahoma, sans-serif;
-    margin: 263px 0 34px 0;
 }
 
-h2 {
+.banner_text h2 {
     font: 400 20px 'Roboto Slab', 'Times New Roman', Times, serif;
     text-transform: none;
 }
@@ -151,6 +156,68 @@ h2 {
 .button:hover {
     background: #fff;
     color: #c0301c;
+}
+
+.about .swiper-slide {
+    text-align: center;
+}
+
+.about-img-wrapper {
+    position:relative;
+    overflow: hidden;
+    margin: 0 0 15px;
+    /*line-height: 0;*/
+}
+
+.about-img-wrapper:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: rgba(85, 85, 85, .5);
+    transition: .3s;
+    z-index: -1;
+}
+
+.about-img-wrapper img {
+    display: block;
+}
+
+.about-img-wrapper ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    transition: .3s;
+    z-index: 10;
+}
+
+.about-img-wrapper a {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.about-img-wrapper a:hover {
+    background: #c0301c;
+}
+
+.swiper-slide:hover .about-img-wrapper:before {
+    opacity: 1;
+    z-index: 5;
+}
+
+.swiper-slide:hover .about-img-wrapper ul {
+    bottom: 30px;
 }
 
 @media  (max-width: 768px) {
