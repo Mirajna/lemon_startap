@@ -32,13 +32,28 @@ img {
 }
 
 body {
-    color: #000;
+    color: #555;
     font: 400 14px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
 }
 
 a {
     text-decoration: none;
     color: #000;
+}
+
+h2 {
+    font: 600 20px 'Montserrat', Arial, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+h3 {
+    font: 600 14px 'Montserrat', Arial, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+h4 {
+    font: 400 16px 'Roboto Slab', 'Times New Roman', Times, serif;
+    letter-spacing: 0.1px;
 }
 
 input {
@@ -57,11 +72,15 @@ table {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
-    flex-direction: row;
+}
+
+.main_banner .container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
 }
 
 .main_banner {
-    min-height: 100vh;
     background: url("../images/main_banner.jpg") no-repeat 50% 50%;
     background-size: cover;
 }
@@ -99,31 +118,20 @@ table {
 
 .mobile-menu {
     cursor: pointer;
-    width: 36px;
+    width: 48px;
     height: 36px;
     margin-top: 5px;
     display: none;
-    background: url("../images/menu.png") no-repeat 50%;
+    background: url("../images/menu-list.png") no-repeat 50%;
     background-size: 100%;
 }
 
-.main-content .container {
-    display: flex;
-    max-width: 1260px;
-    margin: 0 auto;
-}
-
-/*#services {
-    height: 870px;
-}*/
-
 .banner_text {
     display: flex;
-    height: 565px;
-    /*flex-grow: 1; (доделать это дома, вместе с main_banner)*/
+    height: 80%;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
@@ -131,18 +139,22 @@ table {
 
 .banner_text h1 {
     font: 500 48px 'Montserrat', Arial, Tahoma, sans-serif;
+    letter-spacing: 0.2px;
+    margin-top: 5px;
 }
 
 .banner_text h2 {
-    font: 400 20px 'Roboto Slab', 'Times New Roman', Times, serif;
     text-transform: none;
+    margin-top: 18px;
+    font-weight: 500;
+    letter-spacing: -0.6px;
 }
 
 .button {
     display: inline-block;
     height: 52px;
     width: 180px;
-    margin-top: 55px;
+    margin: 48px 7px 0 0;
     padding: 15px;
     text-align: center;
     color: #fff;
@@ -150,7 +162,7 @@ table {
     border-radius: 2px;
     font: 500 16px 'Montserrat', Arial, Tahoma, sans-serif;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
 }
 
 .button:hover {
@@ -158,15 +170,93 @@ table {
     color: #c0301c;
 }
 
+.service_content {
+    text-align: center;
+    padding: 95px 0;
+}
+
+.service_offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#shape {
+    width: 50px;
+    margin: 25px 0;
+}
+
+.advantage {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    margin-top: 70px;
+}
+
+.advantage h3 {
+    padding: 18px 0 14px 0;
+}
+
+.advantage span {
+    font-size: 14px;
+}
+
+.advantage img {
+    padding-left: 14px;
+}
+
+.advantage div {
+    margin: 0 15px;
+}
+
+.advantage div:first-child {
+    margin-left: 0;
+}
+
+.advantage div:last-child {
+    margin-right: 0;
+} /*пробовала ещё margin слева-справа только на .solid_code, но тогда сетка получалась не столь хорошей и c PP править нужно было больше; а также в таком формате, но с .advantage div:nth-child(2), оставила вариант сборки выше, т.к. в случае добавления ещё одного гипотетического блока, нет необходимости переписывать эту часть*/
+
+.clean_typography img {
+    padding-left: 10px;
+}
+
+#about {
+    background: #f8f8f8;
+    text-align: center;
+    padding: 97px 0;
+}
+
+.about_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about_text {
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    margin: 64px 0 67px 0;
+    text-align: left;
+}
+
+.about_text span:first-child {
+    margin-right: 10px;
+}
+
+.about_text span:last-child {
+    margin-left: 10px;
+}
+
 .about .swiper-slide {
     text-align: center;
 }
 
 .about-img-wrapper {
-    position:relative;
+    position: relative;
     overflow: hidden;
     margin: 0 0 15px;
-    /*line-height: 0;*/
 }
 
 .about-img-wrapper:before {
@@ -220,11 +310,38 @@ table {
     bottom: 30px;
 }
 
-@media  (max-width: 768px) {
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    color: #ddd;
+    background: #c0301c;
+    margin: 0 0 61px 15px;
+    padding: 12px 16px 12px 13px;
+    font-size: 14px;
+    font-weight: 600;
+}
 
-    .logo {
-        margin-left: 60px;
-    }  
+.swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+    margin: 0px 15px 61px 0;
+    padding: 12px 13px 12px 14px;
+}
+
+.about-name {
+    font: 600 14px 'Montserrat', Arial, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+.about-position {
+    padding-top: 5px;
+}
+
+@media  (max-width: 812px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .header {
+        flex-direction: row-reverse;
+    }
       
     .navigation {
         position: relative;
@@ -232,15 +349,32 @@ table {
 
     .navigation a {
         display: block;
-        padding: 5px 0;
+        padding: 10px 0;
         text-align: center;
         font-size: 14px;
         color: #c0301c;
         font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    .navigation a:nth-child(even) {
+        background: #f5f5f5;
+    }
+
+    .navigation a:hover {
+        cursor: pointer;
+        color: #fff;
+        background: #c0301c;
+        text-decoration: none;
+    }
+
+    .navigation a:last-of-type {
+        border-bottom: none;
     }
 
     .mobile-menu {
         display: inline-block;
+        justify-content: flex-end;
         margin-right: 60px;
     }
 
@@ -248,17 +382,11 @@ table {
         display: none;
         position: absolute;
         top: 100%;
-        width: 100%;
-        padding: 20px 15px;
+        width: 110%;
         text-align: center;
         z-index: 10;
         background: #fff;
-        /*border: 2px dotted #c0301c;*/
         border-radius: 4px;
-    }
-
-    .banner_text {
-        height: 365px;
     }
 
     h1 {
@@ -266,10 +394,44 @@ table {
     }
 }
 
-@media  (max-width: 380px) {
+@media  (max-width: 680px) {
+    .gallery_frame {
+        margin: 0 auto;
+    }
+}
 
-    h1 {
-        font-size: 34px;
+@media  (max-width: 510px) {
+    .advantage {
+        flex-flow: column;
+    }
+
+    .advantage div, .advantage img {
+        padding: 0;
+        margin: 0;
+    }
+
+    .advantage div:not(:last-child) {
+        margin-bottom: 25px;
+    }
+
+    .about_text {
+        flex-direction: column;
+        text-align: justify;
+    }
+
+    .about_text span:first-child {
+        margin-right: 0;
+        margin-bottom: 38px;
+    }
+    
+    .about_text span:last-child {
+        margin-left: 0;
+    }
+}
+
+@media  (max-width: 380px) {
+    .banner_text h1 {
+        font-size: 36px;
     }
     
     h2 {
@@ -278,12 +440,5 @@ table {
     
     .button {
         font-size: 14px;
-    }
-}
-
-@media  (max-width: 285px) {
-
-    .logo {
-        padding-right: 5px;
     }
 }
