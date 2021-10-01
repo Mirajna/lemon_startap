@@ -466,12 +466,12 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
     color: #c0301c;
 }
 
-.advertising_banner {
-    background: url("../images/bottom_banner.png") no-repeat 50% 50%;
+.touch_banner {
+    background: url("../images/touch_banner.png") no-repeat 50% 50%;
     background-size: cover;
 }
 
-.advertising_text {
+.touch_text {
     display: flex;
     align-items: center;
     height: 369px;
@@ -479,7 +479,7 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
     align-content: center;
 }
 
-.advertising_text .title-30 {
+.touch_text .title-30 {
     display: flex;
     height: 100%;
     width: 455px;
