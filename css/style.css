@@ -95,7 +95,7 @@ table {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 0;
+    padding: 32px 3px 32px 0;
 }
 
 .logo {
@@ -201,7 +201,7 @@ table {
     display: flex;
     flex-flow: row nowrap;
     height: 100%;
-    margin-top: 70px;
+    margin-top: 77px;
 }
 
 .advantage .title-14 {
@@ -210,8 +210,7 @@ table {
 
 .advantage .fa_icon1, .fa_icon2, .fa_icon3 {
     display: block;
-    padding-left: 14px;
-    margin: 0 auto;
+    margin: -8px 0 9px 142px;
     width: 90px;
     height: 90px;
 }
@@ -355,12 +354,13 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
 }
 
 .about-name {
+    margin: 0 0px 0 7px;
     font: 600 14px 'Montserrat', Arial, Tahoma, sans-serif;
     text-transform: uppercase;
 }
 
 .about-position {
-    padding-top: 5px;
+    padding: 5px 0px 0 8px;
 }
 
 .row {
@@ -404,28 +404,28 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
 
 .work-description h5 {
     font: 500 18px/24px 'Montserrat', Arial, Tahoma, sans-serif;
+    margin: -5px 0 5px 0;
 }
 
 .work-category {
     font-size: 12px;
     line-height: 24px;
-    margin: 0 0 20px;
+    margin: 0 0 15px;
 }
 
 .work-button {
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 24px;
+    font: 500 18px/24px 'Myriad Pro', 'Times New Roman', Times, serif;
     text-transform: uppercase;
     color: #c0301c;
     display: inline-block;
     background: #fff;
-    padding: 5px 25px;
+    padding: 7px 20px;
+    margin-top: 5px;
     border-radius: 2px;
 }
 
 .tabs-items {
-    padding-top: 45px;
+    padding-top: 43px;
 }
 
 .tabs-item .col-inner img {
@@ -433,7 +433,7 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
 }
 
 #works {
-    padding: 97px 0;
+    padding: 93px 0 86px 0;
 }
 
 #works .shape {
@@ -489,6 +489,7 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
     color: #fff;
     font-size: 30px;
     font-weight: 400;
+    margin-top: 49px;
 }
 
 .banner_button2 {
@@ -551,8 +552,13 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
         border-radius: 4px;
     }
 
-    .banner_text h1 {
-        margin: 300px 0 34px 0;
+    .advantage .fa_icon1, .fa_icon2, .fa_icon3 {
+        margin: 0 auto;
+    }
+
+    .col-33 {
+        width: 50%;
+        min-width: 50%;
     }
 }
 
@@ -583,9 +589,21 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
     .about_text .plain_text:last-child {
         margin-left: 0;
     }
+
+    .col-33 {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        min-width: 100%;
+    }
+
+    .touch_text .title-30 {
+        width: 365px;
+        font-size: 24px;
+    }
 }
 
-@media  (max-width: 380px) {
+@media  (max-width: 420px) {
     .banner_text h1 {
         font-size: 36px;
     }
@@ -596,5 +614,10 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
     
     .banner_button1, .banner_button2 {
         font-size: 14px;
+    }
+
+    .touch_text .title-30 {
+        width: 100%;
+        margin-bottom: 15px;
     }
 }
