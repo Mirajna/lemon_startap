@@ -499,7 +499,7 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
 }
 
 #blog {
-    padding: 95px;
+    padding: 91px 0 65px;
 }
 
 .posts-list {
@@ -508,7 +508,7 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
 
 .post {
     display: flex;
-    padding: 38px 0;
+    padding: 41px 0 28px 0;
 }
 
 .post + .post {
@@ -560,8 +560,8 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
 .post-title h5 {
     font-size: 14px;
     text-transform: uppercase;
-    font-weight: 500;
-    margin: 0 0 5px;
+    font-weight: 600;
+    margin: -5px 0 6px;
     font-family: 'Montserrat', Arial, Tahoma, Verdana sans-serif;
 }
 
@@ -582,7 +582,7 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
 .post-content p {
     font-size: 14px;
     line-height: 1.7;
-    margin: 0 0 28px;
+    margin: 0 0 23px;
 }
 
 .post-link {
@@ -597,12 +597,13 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100%;
+    padding-top: 3px;
+    width: 90%;
+    margin: 0 auto;
 }
 
-.reviews {
-	width: 100%;
-	height: 100%;
+#clients .swiper {
+    margin-top: -24px;
 }
 
 .reviews .swiper-wrapper {
@@ -612,7 +613,6 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
 .reviews .swiper-slide {
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
 
 .text_reviews {
@@ -623,55 +623,9 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
 }
 
 .author_reviews {
-    padding: 40px 0;
+    margin-top: 40px;
     font: 400 20px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
 }
-
-/*test_start
-
-.swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-}
-.swiper-pagination {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: auto !important;
-	left: auto !important;
-	margin: 0;
-}
-.swiper-pagination-bullet {
-	padding: 5px 10px;
-	border-radius: 0;
-	width: auto;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	font-size: 12px;
-	color:#000;
-	opacity: 1;
-	background: rgba(0,0,0,0.2);
-}
-.swiper-pagination-bullet-active {
-	color:#fff;
-	background: #007aff;
-}
-
-test_end*/
 
 .footer_banner {
     background: #c0301c;
@@ -679,7 +633,7 @@ test_end*/
 }
 
 .social_section {
-    padding-top: 100px;
+    padding: 96px 0 5px 0;
 }
 
 .social_section ul {
@@ -687,8 +641,7 @@ test_end*/
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 100%;
-    width: 15%;
+    width: 183px;
     margin: 0 auto;
 }
 
@@ -702,8 +655,30 @@ test_end*/
     align-items: center;
 }
 
+.swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    margin-bottom: 30px;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #c0301c;
+}
+
 .footer .shape {
     background: #fff;
+}
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font: 400 12px/24px 'Roboto Slab', 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 @media  (max-width: 940px) {
@@ -733,6 +708,19 @@ test_end*/
         font-size: 14px;
         line-height: 1.7;
         margin: 0 0 15px;
+    }
+
+    .our_clients {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .our_clients a:not(:last-child) {
+        padding-right: 10px;
+    }
+
+    .text_reviews {
+        width: 90%;
     }
 }
 
@@ -801,6 +789,25 @@ test_end*/
     }
 }
 
+@media  (max-width: 768px) {
+    .post {
+        flex-direction: column;
+    }
+
+    .post-image {
+        flex-basis: auto;
+        margin: 0 0 15px;
+    }
+
+    .post-header {
+        justify-content: center;
+    }
+
+    .post-content p {
+        text-align: justify;
+    }
+}
+
 @media  (max-width: 510px) {
     .advantage {
         flex-flow: column;
@@ -824,7 +831,7 @@ test_end*/
         margin-right: 0;
         margin-bottom: 38px;
     }
-    
+
     .about_text .plain_text:last-child {
         margin-left: 0;
     }
@@ -858,5 +865,10 @@ test_end*/
     .touch_text .title-30 {
         width: 100%;
         margin-bottom: 15px;
+    }
+
+    .post-title h5,
+    .post-author {
+        line-height: 1.5;
     }
 }
