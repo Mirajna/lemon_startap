@@ -645,7 +645,7 @@ a.fa_icon1:hover, a.fa_icon2:hover, a.fa_icon3:hover {
     margin: 0 auto;
 }
 
-.social_section li {
+.social_section a {
     border: 2px solid #fff;
     border-radius: 50px;
     width: 35px;
