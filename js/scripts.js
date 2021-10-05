@@ -3,7 +3,7 @@ $(document).ready(function () {
         $('.menu').slideToggle().css('right', '0px !important').css('left', 'auto');
     })
     //Gallery
-    const swiper = new Swiper('.gallery', {
+    const swiperGallery = new Swiper('.gallery', {
         loop: true,
         navigation: {
             nextEl: '.swiper-button-next',
@@ -48,14 +48,14 @@ $(document).ready(function () {
         }, 500);
     });
     //Pagination
-    //const swiper = /*new*/ Swiper('.reviews', {
-    //    loop: false,
-    //    pagination: {
-    //      el: '.swiper-pagination',
-    //    },
-    //    scrollbar: {
-    //      el: '.swiper-scrollbar',
-    //    },
-    //  });
+    const swiperReviews = new Swiper('.reviews', {
+        loop: false,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+        },
+      });
     
 })
