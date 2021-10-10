@@ -181,10 +181,6 @@ section:not(:first-of-type) {
     text-align: center;
 }
 
-.special-text {
-    color: #c0301c;
-}
-
 .wrapper {
     overflow: hidden;
 }
@@ -963,6 +959,11 @@ div.contacts_item.email {
 .footnote {
     margin-top: -57px;
     font-size: 12px;
+}
+
+.footnote:before {
+    content: "*";
+    color: #c0301c;
 }
 
 .footer_banner {
